@@ -1,15 +1,12 @@
 from argparse import ArgumentParser
 from pathlib import Path
 
-from ea.sim.main.utils import Method, Scope
+from ea.sim.main.utils import Scope
 
 
 def setup_model_parser() -> ArgumentParser:
     parser = ArgumentParser(add_help=False)
     parser.add_argument('--seed', type=int, required=False, default=42)
-    parser.add_argument('--method', type=Method, default="s3m",
-                        choices=list(Method),
-                        help='Method for similarity prediction')
 
     parser.add_argument('--hyp_top_issues', type=int, default=None)
     parser.add_argument('--hyp_top_stacks', type=int, default=None)

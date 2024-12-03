@@ -38,29 +38,6 @@ class Scope(str, Enum):
     SlowOps = "slowops"
     SideProject = "side_project"
     NetBeans = "netbeans"
-    Combined = "combined"
     Eclipse = "eclipse"
     Campbell = "campbell"
     Gnome = "gnome"
-
-
-class Method(str, Enum):
-    # Neural
-    S3M = "s3m"
-    NeuralLerch = "neural_lerch"
-
-    # Classic
-    Lerch = "lerch"
-    Cosine = "cosine"
-    Prefix = "prefix"
-    ReBucket = "rebucket"
-    TraceSim = "tracesim"
-    Levenshtein = "levenshtein"
-    Brodie = "brodie"
-    Moroo = "moroo"
-    Irving = "irving"
-    Durfex = "durfex"
-    Linreg = "linreg"
-    CrashGraphs = "crash_graphs"
-    LSI = "lsi"
-    FaST = "fast"

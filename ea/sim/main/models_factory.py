@@ -7,7 +7,7 @@ from ea.sim.main.preprocess.crashes.entry_coders import Crash2Seq
 from ea.sim.main.preprocess.entry_coders import Stack2Seq
 from ea.sim.main.preprocess.seq_coder import SeqCoder
 from ea.sim.main.preprocess.tokenizers import SimpleTokenizer, BPETokenizer
-from ea.sim.main.utils import Scope, Method
+from ea.sim.main.utils import Scope
 
 
 def create_seq_coder(stack_loader: StackLoader, config: SeqCoderConfig) -> SeqCoder:
@@ -26,11 +26,3 @@ def create_seq_coder(stack_loader: StackLoader, config: SeqCoderConfig) -> SeqCo
         )
     else:
         raise ValueError(f"Not found SeqCoder for '{scope.value}' scope")
-
-
-def create_classic_sim_stack_model(coder: SeqCoder, method: Method) -> SimStackModel:
-    if method == Method.FaST:
-        model = FaST(coder)
-    else:
-        raise ValueError(f"Not found model for '{method.value} method'")
-    return model

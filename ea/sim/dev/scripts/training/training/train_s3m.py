@@ -24,7 +24,6 @@ from ea.sim.dev.scripts.training.training.common import create_bucket_data, fit_
 from ea.sim.main.data.buckets.bucket_data import DataSegment
 from ea.sim.main.data.duplicates import HashStorage
 from ea.sim.main.methods.neural.similarity import CosineSimilarity, Similarity
-from ea.sim.main.utils import Method
  
 from ea.sim.dev.scripts.training.models.cross_encoder_on_triplets import CrossEncoderModel
 from ea.sim.main.utils import Scope, device, ARTIFACTS_DIR
@@ -49,7 +48,7 @@ def create_similarity(sim_type: str) -> Similarity:
 
 
 def train_similarity_model(
-        method: Method, data_name: str, scope: Scope,
+        data_name: str, scope: Scope,
         data_segment: Segment, path_args: PathArgs, callback_args: CallbackArgs,
         forget_days: int | None, max_per_group: int, path_to_save: Path
 ):
@@ -162,7 +161,6 @@ def run():
     )
 
     train_similarity_model(
-        method=args.method,
         data_name=args.data_name,
         scope=args.scope,
         data_segment=data_segment,

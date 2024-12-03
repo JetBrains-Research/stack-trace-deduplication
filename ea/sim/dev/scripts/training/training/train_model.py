@@ -25,7 +25,7 @@ from ea.sim.main.methods.neural.encoders.texts import Encoder
 from ea.sim.main.methods.neural.encoders.texts.rnn import RNNTextEncoder
 from ea.sim.main.methods.neural.similarity import CosineSimilarity, Similarity
 from ea.sim.main.models_factory import create_seq_coder
-from ea.sim.main.utils import Method, Scope
+from ea.sim.main.utils import Scope
 
 from ea.sim.main.methods.neural.cross_encoders.rnn import LSTMCrossEncoder, LSTMCrossEncoderConfig
 from ea.sim.dev.scripts.training.models.cross_encoder_on_triplets import CrossEncoderModel
@@ -80,7 +80,7 @@ def create_similarity(sim_type: str) -> Similarity:
 
 
 def train_similarity_model(
-        method: Method, data_name: str, scope: Scope,
+        data_name: str, scope: Scope,
         data_segment: Segment, path_args: PathArgs, callback_args: CallbackArgs,
         forget_days: int | None, max_per_group: int, path_to_save: Path
 ):
@@ -208,7 +208,6 @@ def run():
     )
 
     train_similarity_model(
-        method=args.method,
         data_name=args.data_name,
         scope=args.scope,
         data_segment=data_segment,
