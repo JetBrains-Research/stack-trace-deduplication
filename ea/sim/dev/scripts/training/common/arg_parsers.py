@@ -19,17 +19,17 @@ def setup_model_parser() -> ArgumentParser:
 
 def setup_train_markup_parser() -> ArgumentParser:
     parser = ArgumentParser(add_help=False)
-    parser.add_argument('--train_start', type=int)
-    parser.add_argument('--train_longitude', type=int)
+    parser.add_argument('--train_start', type=int, default=0)
+    parser.add_argument('--train_longitude', type=int, default=0)
 
-    parser.add_argument('--val_start', type=int)
-    parser.add_argument('--val_longitude', type=int)
+    parser.add_argument('--val_start', type=int, default=0)
+    parser.add_argument('--val_longitude', type=int, default=0)
 
-    parser.add_argument('--test_start', type=int)
-    parser.add_argument('--test_longitude', type=int)
+    parser.add_argument('--test_start', type=int, default=0)
+    parser.add_argument('--test_longitude', type=int, default=0)
     parser.add_argument('--max_per_group', type=int, default=100)
 
-    parser.add_argument('--data_name', type=str, help='Data name')
+    parser.add_argument('--data_name', type=str, help='Data name', default='netbeans')
     parser.add_argument('--forget_days', type=int, default=365)
     parser.add_argument('--random_init', type=bool, default=False)
     parser.add_argument('--eval_only', type=bool, default=False)
