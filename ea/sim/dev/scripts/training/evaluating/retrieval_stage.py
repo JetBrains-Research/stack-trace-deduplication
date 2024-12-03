@@ -1,4 +1,5 @@
 import argparse
+from pathlib import Path
 from ea.sim.main.methods.neural.encoders.objects import Item
 from tqdm import tqdm
 import json
@@ -59,12 +60,13 @@ def run():
     config_path = ARTIFACTS_DIR / "config.json"
     config = json.loads(config_path.read_text())
     for arg, value in config.items():
-        if hasattr(args, arg):
+        if hasattr(args, arg) and args.__getattribute__(arg) is not None:
             value = args.__getattribute__(arg).__class__(value)
         args.__setattr__(arg, value)
  
     logger.debug(f"Setting up evaluator with args: {vars(args)}")
-
+    
+    args.model_ckpt_path = Path(args.model_ckpt_path)
     model_name = args.model_ckpt_path.parent.name
     if args.random_init:
         model_name = "random_init"

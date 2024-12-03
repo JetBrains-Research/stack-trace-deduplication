@@ -30,6 +30,7 @@ plotly = "^5.19.0"
 pytorch-metric-learning = "^2.5.0"
 transformers = "^4.39.3"
 gensim = "^4.3.3"
+wandb = "^0.18.7"
 
 [tool.poetry.group.dev.dependencies]
 mlflow = "^2.6.0"
