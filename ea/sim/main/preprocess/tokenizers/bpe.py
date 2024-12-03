@@ -14,9 +14,6 @@ from ea.sim.main.preprocess.tokenizers import Tokenizer
 from ea.sim.main.utils import ARTIFACTS_DIR
 
 SAVE_FOLDER = ARTIFACTS_DIR / "bpe"
-# from pathlib import Path
-# SAVE_FOLDER = Path("/home/ec2-user/similarity_artifacts/combined/bpe/")
-# logger.warning(f"SAVE_FOLDER changed to {SAVE_FOLDER}")
 TEXT_PATH = SAVE_FOLDER / "text.txt"
 VOCAB_PATH = SAVE_FOLDER / "vocab.json"
 
