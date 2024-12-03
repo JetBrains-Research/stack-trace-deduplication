@@ -27,6 +27,7 @@ def setup_train_markup_parser() -> ArgumentParser:
 
     parser.add_argument('--test_start', type=int)
     parser.add_argument('--test_longitude', type=int)
+    parser.add_argument('--max_per_group', type=int, default=100)
 
     parser.add_argument('--data_name', type=str, help='Data name')
     parser.add_argument('--forget_days', type=int, default=365)
@@ -52,7 +53,7 @@ def setup_data_parser() -> ArgumentParser:
         default=Path("")
     )
     parser.add_argument(
-        "--scope", type=Scope, choices=list(Scope), help="Scope of reports"
+        "--scope", type=Scope, choices=list(Scope), help="Scope of reports", default=Scope.NetBeans
     )
     parser.add_argument(
         "--artifacts_dir", type=Path,

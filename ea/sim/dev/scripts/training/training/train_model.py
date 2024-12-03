@@ -177,7 +177,7 @@ def run():
     config_path = ARTIFACTS_DIR / "config.json"
     config = json.loads(config_path.read_text())
     for arg, value in config.items():
-        if hasattr(args, arg):
+        if hasattr(args, arg) and args.__getattribute__(arg) is not None:
             value = args.__getattribute__(arg).__class__(value)
         args.__setattr__(arg, value)
     logger.debug(f"Setting up evaluator with args: {vars(args)}")
