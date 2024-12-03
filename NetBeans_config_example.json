@@ -1,0 +1,14 @@
+{
+    "reports_dir": "path/to/dataset/NetBeans/reports",
+    "labels_dir": "path/to/dataset/NetBeans/",
+    "data_name": "netbeans",
+    "scope": "netbeans",
+    "train_start": 0,
+    "train_longitude": 4760,
+    "val_start": 4761,
+    "val_longitude": 424,
+    "test_start": 5185,
+    "test_longitude": 1485,
+    "forget_days": 350,
+    "dup_attach": true
+}

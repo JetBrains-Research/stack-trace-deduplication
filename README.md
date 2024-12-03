@@ -43,7 +43,7 @@ timestamp,rid,iid
 ```
 where `timestamp` is the timestamp of the report, `rid` is the report ID, and `iid` is the category ID.
 
-The example of a dataset is presented in the 'NetBeans' directory.
+The example of a config file can be found in the [NetBeans_config_example.json](NetBeans_config_example.json) file.
 
 ## 3. Run the experiments
 
