@@ -47,6 +47,16 @@ The example of a config file can be found in the [NetBeans_config_example.json](
 
 ## 3. Run the experiments
 
+### Generating the traing dataset
+
+Before embedding model (embedding_model, cross_encoder, deep_crash, s3m) training, the training dataset should be generated from the reports and labels. Scripts for generating the training dataset are located in the folder `ea/sim/dev/scripts/data/dataset/`. Here is an example of how to generate the training dataset for the NetBeans dataset:
+
+```bash
+python ea/sim/dev/scripts/data/dataset/nb/main.py --reports_dir=path/to/dataset/NetBeans/ --state_path=path/to/dataset/NetBeans/state.csv --save_dir=path/to/save/netbeans/
+```
+
+The generated dataset should be passed to training scripts as an `dataset_dir` argument.
+
 ### Training the models
 
 Training scripts are located in the folder `ea/sim/dev/scripts/training/training`.
