@@ -1,11 +1,21 @@
 # Stack Trace Similarity
 
-This replication package presents the code of our approach and an instruction for running the experiments.
+This repository provides an overview and instructions for replicating our experiments on stack trace similarity, including details on code structure, setup, and execution steps. Below, you will find a breakdown of the key directories and scripts essential for the experiments.
 
-Since we cannot provide the newly collected industrial dataset due to anonymity restrictions, instead, we append the existing 
-open-source NetBeans dataset in the same format for clarity (it can be found in the `NetBeans` directory). 
-The structure of the dataset is described below in section "Setup". Upon acceptance, we will release the new 
-industrial dataset to the research community.
+The directory [ea/sim/main/methods/neural/encoders/](ea/sim/main/methods/neural/encoders/) contains the implementation of the neural encoders used in the experiments:
+- [embedding model](ea/sim/main/methods/neural/encoders/texts/rnn.py) presented in the paper,
+- [our implementation of DeepCrash model](ea/sim/main/methods/neural/encoders/tokens/skip_gram_BOW.py),
+
+The directory [ea/sim/main/methods/neural/cross_encoders/](ea/sim/main/methods/neural/cross_encoders/) contains the implementation of the models that involve interaction between stack traces when computing similarity scores:
+- [cross-encoder](ea/sim/main/methods/neural/cross_encoders/rnn.py) presented in the paper,
+- [S3M](ea/sim/main/methods/neural/cross_encoders/s3m.py) 
+- [Lerch](ea/sim/main/methods/neural/cross_encoders/lerch.py) models.
+
+The implementation of the FaST model is located [here](ea/sim/main/methods/classic/fast.py).
+
+The training scripts are located in the directory [ea/sim/dev/scripts/training/training/](ea/sim/dev/scripts/training/training/).
+
+The evaluation scripts are located in the directory [ea/sim/dev/scripts/training/evaluating/](ea/sim/dev/scripts/training/evaluating/).
 
 ## 1. Install the required packages
 ```bash
