@@ -26,7 +26,7 @@ and also use established open-source ones.
 
 **SlowOps**, our new dataset of _Slow Operation Assertion_ stack traces from IntelliJ-based products, can be found [here](https://doi.org/10.5281/zenodo.14364857).
 
-Open-source datasets, namely **Ubuntu**, **Eclipse**, **NetBeans**, and **Gnome**, can be found TODO.
+Open-source datasets, namely **Ubuntu**, **Eclipse**, **NetBeans**, and **Gnome**, can be found [here](https://doi.org/10.5281/zenodo.5746044).
 
 _Note_: to run our models on open-source datasets, you need to transform them into the right format. The scripts for doing that are available TODO.
 
