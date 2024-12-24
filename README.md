@@ -1,6 +1,6 @@
 # 🐑 Stack Trace Deduplication 🐑
 
-This repository provides an overview and instructions for replicating experiments on stack trace deduplication from our paper "_Stack Trace Deduplication: Faster, More Accurately, and in More Realistic Scenarios_", including details on code structure, setup, and execution steps. Below, you will find a breakdown of the key directories and scripts essential for the experiments.
+This repository provides an overview and instructions for replicating experiments on stack trace deduplication from our paper ["_Stack Trace Deduplication: Faster, More Accurately, and in More Realistic Scenarios_"](https://arxiv.org/abs/2412.14802), including details on code structure, setup, and execution steps. Below, you will find a breakdown of the key directories and scripts essential for the experiments.
 
 ## 🏗️ Repository structure
 
@@ -163,8 +163,13 @@ The results of the evaluation will be saved in the `ARTIFACTS_DIR` directory.
 
 ## 👩🏻‍🔬 Citing
 
-If you want to find more details about the models or the evaluation, please refer to our SANER paper. If you use the code in your work, please consider citing us:
+If you want to find more details about the models or the evaluation, please refer to our [SANER paper](https://arxiv.org/abs/2412.14802). If you use the code in your work, please consider citing us:
 
 ```angular2html
-TODO
+@article{shibaev2024stack,
+  title={Stack Trace Deduplication: Faster, More Accurately, and in More Realistic Scenarios},
+  author={Shibaev, Egor and Sushentsev, Denis and Golubev, Yaroslav and Khvorov, Aleksandr},
+  journal={arXiv preprint arXiv:2412.14802},
+  year={2024}
+}
 ```
