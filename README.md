@@ -28,7 +28,7 @@ and also use established open-source ones.
 
 Open-source datasets, namely **Ubuntu**, **Eclipse**, **NetBeans**, and **Gnome**, can be found [here](https://doi.org/10.5281/zenodo.5746044).
 
-_Note_: to run our models on open-source datasets, you need to transform them into the right format. The scripts for doing that are available TODO.
+_Note_: to run our models on open-source datasets, you need to transform them into the right format. The script for doing that is available [here](helpers/dataset_converter.py).
 
 ## 🏃 Running the code
 
