@@ -1,3 +1,5 @@
+[![JetBrains Research](https://jb.gg/badges/research.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+
 # 🐑 Stack Trace Deduplication 🐑
 
 This repository provides an overview and instructions for replicating experiments on stack trace deduplication from our paper ["_Stack Trace Deduplication: Faster, More Accurately, and in More Realistic Scenarios_"](https://arxiv.org/abs/2412.14802), including details on code structure, setup, and execution steps. Below, you will find a breakdown of the key directories and scripts essential for the experiments.
